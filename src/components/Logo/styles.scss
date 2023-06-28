@@ -1,0 +1,30 @@
+.mainLogo{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(152, 147, 147, 0.21);
+    padding: 24px;
+    .cornerlogo{
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        border-bottom: 2px solid #fff;
+        border-left: 2px solid #fff;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .cornerlogo{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainLogo{
+        img{
+            width: 200px;
+        }
+    }
+}

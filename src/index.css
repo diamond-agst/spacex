@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('./assets/fonts/Museo-Sans-Cyrl-100.ttf');
+  font-weight: 100;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('./assets/fonts/Museo-Sans-Cyrl-300.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl';
+  src: url('./assets/fonts/Museo-Sans-Cyrl-700.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100vh;
+}
+
+body, #root{
+  height: 100%;
+}
+
+@media screen and (max-height: 530px) {
+  html{
+    height: auto;
+  }
 }

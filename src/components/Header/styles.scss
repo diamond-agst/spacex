@@ -1,0 +1,102 @@
+.headerWrapper{
+    background: rgba(21, 10, 1, 0.21);
+    width: 90%;
+    border-bottom: 1px solid rgba(152, 147, 147, 0.21);
+    border-right: 1px solid rgba(152, 147, 147, 0.21);
+    display: flex;
+    justify-content: flex-end;
+    .headerBlock{
+        display: flex;
+        justify-content: space-between;
+        width: 89%;
+        .headerMenu{
+            display: flex;
+            align-items: center;
+            margin-right: 32px;
+            .menuItem{
+                margin-right: 30px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+                p{  
+                    position: relative;
+                    font-family: 'Museo Sans Cyrl';
+                    font-size: 16px;
+                    font-weight: 300;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover{
+                        opacity: 0.4;
+                    }
+                    &:hover:after{
+                        content: "";
+                        position: absolute;
+                        bottom: -8px;
+                        left: 0px;
+                        width: 100%;
+                        height: 1px;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .menuBurger{
+        display: none;
+    }
+    .mobileMenu{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000000;
+        z-index: 9999;
+        overflow: hidden;
+        transform: translateX(100%);
+        transition: all 0.3s linear;
+        display: flex !important;
+        justify-content: space-between;
+        padding: 20px;
+        .menuMobileBlock{
+            .menuItem{
+                p{
+                    font-family: 'Museo Sans Cyrl';
+                    font-size: 26px;
+                    font-weight: 300;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .openMenu{
+        transform: translateX(0) !important
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    .headerMenu{
+        display: none !important;
+    }
+    .menuBurger{
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30px;
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .headerWrapper{
+        width: 100%;
+        justify-content: space-evenly !important;
+    }
+    .mainLogo{
+        border: none;
+    }
+}
